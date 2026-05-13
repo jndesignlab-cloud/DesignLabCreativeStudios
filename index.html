@@ -14,8 +14,12 @@
       --text: #08090d;
       --muted: #5f6472;
       --line: #e6e8ef;
-      --blue: #4f73ff;
-      --green: #3f7d4f;
+      --blue: #2f60cf;
+      --light-blue: #79addf;
+      --dark-gray: #444852;
+      --deep-blue: #353d91;
+      --accent-coral: #ef6a67;
+      --green: #406f27;
       --soft-blue: #eef2ff;
       --shadow: 0 20px 60px rgba(10, 20, 40, 0.08);
       --radius-lg: 28px;
@@ -220,7 +224,7 @@
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, var(--blue), #9c8cff, var(--green));
+      background: linear-gradient(90deg, var(--blue), var(--light-blue), var(--deep-blue), var(--accent-coral));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -270,8 +274,9 @@
       border: 1px solid var(--line);
       border-radius: 36px;
       background:
-        radial-gradient(circle at 68% 20%, rgba(79, 115, 255, 0.35), transparent 28%),
-        radial-gradient(circle at 78% 62%, rgba(63, 125, 79, 0.14), transparent 30%),
+        radial-gradient(circle at 68% 20%, rgba(47, 96, 207, 0.30), transparent 28%),
+        radial-gradient(circle at 78% 62%, rgba(121, 173, 223, 0.22), transparent 30%),
+        radial-gradient(circle at 40% 90%, rgba(239, 106, 103, 0.12), transparent 24%),
         #fbfcff;
       overflow: hidden;
     }
@@ -487,7 +492,7 @@
       height: 130px;
       border-radius: 18px;
       margin-bottom: 18px;
-      background: linear-gradient(135deg, rgba(79,115,255,.18), rgba(63,125,79,.18));
+      background: linear-gradient(135deg, rgba(47,96,207,.18), rgba(121,173,223,.22), rgba(239,106,103,.12));
       border: 1px solid var(--line);
     }
 
@@ -695,7 +700,7 @@
           <div class="visual-grid"></div>
 
           <!-- Replace this image with your own portrait file -->
-          <img class="portrait" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=900&auto=format&fit=crop" alt="Portrait of Jann Nathaniel Jaravata" />
+          <img class="portrait" src="pfp.png" alt="Portrait of Jann Nathaniel Jaravata" />
 
           <div class="float-card focus-card">
             <p>Focused on</p>
@@ -708,10 +713,10 @@
 
           <div class="float-card stat-card">
             <svg class="line-chart" viewBox="0 0 160 60" fill="none">
-              <path d="M10 48 L45 34 L78 41 L112 25 L150 12" stroke="#4f73ff" stroke-width="3" fill="none"/>
-              <circle cx="45" cy="34" r="4" fill="#4f73ff"/>
-              <circle cx="78" cy="41" r="4" fill="#4f73ff"/>
-              <circle cx="112" cy="25" r="4" fill="#4f73ff"/>
+              <path d="M10 48 L45 34 L78 41 L112 25 L150 12" stroke="#263f77" stroke-width="3" fill="none"/>
+              <circle cx="45" cy="34" r="4" fill="#263f77"/>
+              <circle cx="78" cy="41" r="4" fill="#263f77"/>
+              <circle cx="112" cy="25" r="4" fill="#263f77"/>
             </svg>
             <h3>6+</h3>
             <p>Years of design experience</p>
