@@ -25,16 +25,8 @@
       --radius-lg:28px;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
     body{
       font-family:"Inter",sans-serif;
       background:var(--bg);
@@ -42,10 +34,7 @@
       overflow-x:hidden;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
+    a{text-decoration:none;color:inherit;}
 
     .page{
       display:grid;
@@ -68,11 +57,7 @@
       justify-content:space-between;
     }
 
-    .brand{
-      text-align:center;
-      margin-bottom:32px;
-    }
-
+    .brand{text-align:center;margin-bottom:32px;}
     .brand-mark{
       font-size:30px;
       font-weight:900;
@@ -88,12 +73,7 @@
       line-height:1.5;
     }
 
-    .nav{
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-    }
-
+    .nav{display:flex;flex-direction:column;gap:16px;}
     .nav a{
       padding:15px 16px;
       border-radius:14px;
@@ -135,9 +115,7 @@
       color:var(--muted);
     }
 
-    .main{
-      padding:54px 48px 32px 0;
-    }
+    .main{padding:54px 48px 32px 0;}
 
     .topbar{
       display:flex;
@@ -179,11 +157,11 @@
     }
 
     h1{
-      font-size:clamp(50px,5.4vw,86px);
-      line-height:.95;
-      letter-spacing:-0.08em;
+      font-size:clamp(42px,4.5vw,70px);
+      line-height:1;
+      letter-spacing:-0.075em;
       font-weight:900;
-      max-width:760px;
+      max-width:720px;
       margin-bottom:30px;
     }
 
@@ -242,9 +220,7 @@
       color:#fff;
     }
 
-    .btn:hover{
-      transform:translateY(-4px);
-    }
+    .btn:hover{transform:translateY(-4px);}
 
     .hero-visual{
       position:relative;
@@ -333,10 +309,7 @@
       animation:floatStat 5s ease-in-out infinite;
     }
 
-    .line-chart{
-      width:100%;
-      height:52px;
-    }
+    .line-chart{width:100%;height:52px;}
 
     .stat-card h3{
       font-size:58px;
@@ -345,10 +318,7 @@
       margin:18px 0 12px;
     }
 
-    .stat-card p{
-      line-height:1.6;
-      color:#444;
-    }
+    .stat-card p{line-height:1.6;color:#444;}
 
     @keyframes floatCard{
       0%{transform:translateY(0);}
@@ -424,9 +394,7 @@
       color:#1f2230;
     }
 
-    section.content-section{
-      padding:120px 0 20px;
-    }
+    section.content-section{padding:120px 0 20px;}
 
     .section-heading{
       font-size:clamp(34px,4vw,56px);
@@ -461,9 +429,7 @@
     }
 
     .project-card:hover,
-    .service-card:hover{
-      transform:translateY(-6px);
-    }
+    .service-card:hover{transform:translateY(-6px);}
 
     .project-thumb{
       height:130px;
@@ -488,37 +454,15 @@
     }
 
     @media(max-width:1180px){
-      .page{
-        grid-template-columns:1fr;
-      }
-
-      .sidebar{
-        position:relative;
-        height:auto;
-      }
-
-      .main{
-        padding:20px 0 40px;
-      }
-
-      .hero{
-        grid-template-columns:1fr;
-      }
-
-      .hero-visual{
-        min-height:620px;
-      }
-
-      .focus-card{
-        left:24px;
-        bottom:24px;
-      }
-
+      .page{grid-template-columns:1fr;}
+      .sidebar{position:relative;height:auto;}
+      .main{padding:20px 0 40px;}
+      .hero{grid-template-columns:1fr;}
+      .hero-visual{min-height:620px;}
+      .focus-card{left:24px;bottom:24px;}
       .stats-bar,
       .project-grid,
-      .service-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
+      .service-grid{grid-template-columns:repeat(2,1fr);}
     }
 
     @media(max-width:680px){
@@ -528,40 +472,18 @@
         gap:18px;
       }
 
-      h1{
-        font-size:48px;
-      }
-
-      .lead{
-        font-size:17px;
-      }
-
-      .hero-visual{
-        min-height:500px;
-      }
-
-      .hero-logo{
-        width:95%;
-      }
-
-      .focus-card{
-        display:none;
-      }
-
-      .stat-card{
-        top:20px;
-        right:20px;
-      }
+      h1{font-size:42px;}
+      .lead{font-size:17px;}
+      .hero-visual{min-height:500px;}
+      .hero-logo{width:95%;}
+      .focus-card{display:none;}
+      .stat-card{top:20px;right:20px;}
 
       .stats-bar,
       .project-grid,
-      .service-grid{
-        grid-template-columns:1fr;
-      }
+      .service-grid{grid-template-columns:1fr;}
 
-      .btn{
-        width:100%;
-      }
+      .btn{width:100%;}
     }
   </style>
 </head>
