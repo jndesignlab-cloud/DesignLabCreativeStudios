@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Jann Nathaniel Jaravata | Design Lab Creative Studio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-
     :root {
       --bg: #f7f8fb;
       --panel: #ffffff;
@@ -22,459 +22,687 @@
       --light-blue: #79addf;
       --deep-blue: #353d91;
       --accent-coral: #ef6a67;
+      --green: #406f27;
+      --soft-blue: #eef2ff;
       --shadow: 0 20px 60px rgba(10, 20, 40, 0.08);
       --radius-lg: 28px;
+      --radius-md: 18px;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      font-family:"Inter",sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      overflow-x:hidden;
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .page{
-      display:grid;
-      grid-template-columns:250px 1fr;
-      gap:48px;
-      padding:24px;
-      min-height:100vh;
+    .page {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 48px;
+      padding: 24px;
+      min-height: 100vh;
     }
 
-    /* SIDEBAR */
-
-    .sidebar{
-      position:sticky;
-      top:24px;
-      height:calc(100vh - 48px);
-      background:#fff;
-      border-radius:var(--radius-lg);
-      box-shadow:var(--shadow);
-      padding:42px 28px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      height: calc(100vh - 48px);
+      background: var(--panel);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 42px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .brand{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:10px;
-      margin-bottom:32px;
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
     }
 
-    .brand-mark{
-      font-size:36px;
-      font-weight:900;
-      letter-spacing:-0.08em;
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      font-size: 28px;
+      color: #050505;
     }
 
-    .brand small{
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:var(--muted);
-      text-align:center;
-      line-height:1.5;
+    .brand small {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.4;
     }
 
-    .nav{
-      display:flex;
-      flex-direction:column;
-      gap:16px;
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .nav a{
-      padding:16px;
-      border-radius:14px;
-      font-size:14px;
-      font-weight:700;
-      transition:.25s ease;
+    .nav a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 16px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111217;
+      transition: 0.25s ease;
     }
 
-    .nav a:hover{
-      background:#f1f3f8;
-      color:var(--blue);
+    .nav a:hover,
+    .nav a.active {
+      background: #f1f3f8;
+      color: var(--blue);
+      transform: translateX(4px);
     }
 
-    .socials{
-      border-top:1px solid var(--line);
-      padding-top:24px;
+    .nav svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 1.9;
     }
 
-    .social-row{
-      display:flex;
-      gap:10px;
-      margin-bottom:22px;
+    .socials {
+      border-top: 1px solid var(--line);
+      padding-top: 28px;
     }
 
-    .social-row a{
-      width:42px;
-      height:42px;
-      display:grid;
-      place-items:center;
-      background:#f4f5f8;
-      border-radius:10px;
-      font-weight:800;
+    .social-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
     }
 
-    .copyright{
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.6;
+    .social-row a {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: #f4f5f8;
+      border-radius: 10px;
+      font-weight: 800;
+      transition: 0.25s ease;
     }
 
-    /* MAIN */
-
-    .main{
-      padding:40px 40px 60px 0;
+    .social-row a:hover {
+      background: var(--blue);
+      color: #fff;
+      transform: translateY(-3px);
     }
 
-    /* HERO */
-
-    .hero{
-      min-height:90vh;
-      display:grid;
-      grid-template-columns:1fr .95fr;
-      gap:48px;
-      align-items:center;
+    .copyright {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
     }
 
-    h1{
-      font-size:clamp(60px,7vw,110px);
-      line-height:.92;
-      letter-spacing:-0.08em;
-      font-weight:900;
-      margin-bottom:30px;
-      max-width:760px;
+    .main {
+      padding: 54px 48px 32px 0;
+      overflow: hidden;
     }
 
-    .gradient-text{
-      background:linear-gradient(
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .eyebrow,
+    .availability {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .availability {
+      text-transform: none;
+      letter-spacing: -0.01em;
+      font-size: 14px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 6px rgba(79, 115, 255, 0.1);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+      min-height: 88vh;
+      position: relative;
+    }
+
+    .hero-copy {
+      z-index: 3;
+    }
+
+    h1 {
+      font-size: clamp(58px, 6vw, 100px);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+      font-weight: 900;
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
         90deg,
         #4d7cff,
         #79addf,
         #5d57d9,
         #ef6a67
       );
-
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
-    .lead{
-      max-width:650px;
-      font-size:20px;
-      line-height:1.8;
-      color:#3c404d;
-      margin-bottom:34px;
+    .lead {
+      max-width: 650px;
+      color: #3c404d;
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 34px;
     }
 
-    .hero-tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-bottom:40px;
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 40px;
     }
 
-    .hero-tags span{
-      padding:13px 18px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid #dfe3ef;
-      font-size:14px;
-      font-weight:700;
+    .hero-tags span {
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #dfe3ef;
+      font-size: 14px;
+      font-weight: 700;
     }
 
-    .cta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:18px;
+    .cta-row {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    .btn{
-      min-width:220px;
-      padding:20px 24px;
-      border-radius:18px;
-      font-size:15px;
-      font-weight:800;
-      border:1px solid #111;
-      transition:.25s ease;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .btn {
+      min-width: 178px;
+      border: 1px solid #15161a;
+      border-radius: 14px;
+      padding: 18px 24px;
+      font-size: 14px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      transition: 0.25s ease;
     }
 
-    .btn.primary{
-      background:#08090d;
-      color:#fff;
+    .btn.primary {
+      background: #07080d;
+      color: #fff;
     }
 
-    .btn:hover{
-      transform:translateY(-4px);
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
     }
 
-    /* HERO VISUAL */
-
-    .hero-visual{
-      position:relative;
-      min-height:700px;
-      border-radius:42px;
-      overflow:hidden;
-
+    .hero-visual {
+      position: relative;
+      min-height: 700px;
+      border: 1px solid #dfe3ef;
+      border-radius: 42px;
       background:
         radial-gradient(circle at top right, rgba(77,124,255,0.14), transparent 25%),
         radial-gradient(circle at bottom left, rgba(239,106,103,0.08), transparent 25%),
         #f8f9fd;
-
-      border:1px solid #dfe3ef;
+      overflow: hidden;
     }
 
-    .hero-logo{
-      position:absolute;
-      width:78%;
-      left:50%;
-      top:50%;
-      transform:translate(-50%, -50%);
-      z-index:2;
+    .hero-logo {
+      position: absolute;
+      width: 78%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
     }
 
-    .visual-grid{
-      position:absolute;
-      width:240px;
-      height:240px;
-      right:70px;
-      bottom:70px;
-      opacity:.35;
-
-      background-image:
-        radial-gradient(#263f77 1px, transparent 1px);
-
-      background-size:14px 14px;
+    .visual-grid {
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      right: 70px;
+      bottom: 70px;
+      opacity: 0.35;
+      background-image: radial-gradient(#263f77 1px, transparent 1px);
+      background-size: 14px 14px;
     }
 
-    .float-card{
-      position:absolute;
-      background:rgba(255,255,255,.84);
-      backdrop-filter:blur(18px);
-      border-radius:24px;
-      padding:24px;
-      z-index:5;
-      box-shadow:0 18px 40px rgba(0,0,0,.08);
+    .float-card {
+      position: absolute;
+      background: rgba(255,255,255,.84);
+      backdrop-filter: blur(18px);
+      border-radius: 24px;
+      padding: 24px;
+      z-index: 5;
+      box-shadow: 0 18px 40px rgba(0,0,0,.08);
     }
 
-    .focus-card{
-      width:240px;
-      left:-40px;
-      bottom:160px;
+    .focus-card {
+      width: 240px;
+      left: -40px;
+      bottom: 160px;
     }
 
-    .focus-card p{
-      margin-bottom:18px;
-      font-weight:700;
+    .focus-card p,
+    .stat-card p {
+      font-size: 13px;
+      color: #16181f;
+      margin-bottom: 16px;
     }
 
-    .check-list{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
+    .check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333744;
     }
 
-    .check-list span{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:15px;
-      font-weight:600;
+    .check-list span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .check{
-      width:18px;
-      height:18px;
-      border-radius:50%;
-      background:#2f60cf;
-      color:#fff;
-      display:grid;
-      place-items:center;
-      font-size:11px;
+    .check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      flex: 0 0 auto;
     }
 
-    .stat-card{
-      width:190px;
-      top:220px;
-      right:24px;
+    .stat-card {
+      right: 24px;
+      top: 220px;
+      width: 190px;
     }
 
-    .line-chart{
-      width:100%;
-      height:52px;
+    .stat-card h3 {
+      font-size: 58px;
+      line-height: 1;
+      letter-spacing: -0.08em;
+      margin: 18px 0 12px;
     }
 
-    .stat-card h3{
-      font-size:58px;
-      line-height:1;
-      letter-spacing:-0.08em;
-      margin:18px 0 12px;
+    .line-chart {
+      width: 100%;
+      height: 52px;
+      margin-bottom: 12px;
     }
 
-    /* LOGOS */
-
-    .logos{
-      margin-top:40px;
-      border-top:1px solid #111;
-      padding-top:24px;
+    .logos {
+      margin-top: 40px;
+      position: relative;
+      z-index: 6;
+      max-width: 1000px;
+      border-top: 1px solid #22242a;
+      padding-top: 24px;
     }
 
-    .logos-title{
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      margin-bottom:22px;
+    .logos-title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #292c35;
+      margin-bottom: 24px;
     }
 
-    .logo-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:42px;
-      font-size:30px;
-      font-weight:900;
-      letter-spacing:-0.06em;
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 42px;
+      flex-wrap: wrap;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      color: #101117;
+      opacity: 0.95;
     }
 
-    /* CONTENT */
-
-    section.content-section{
-      padding:120px 0 20px;
+    .stats-bar {
+      margin-top: 48px;
+      background: var(--panel);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 34px 42px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
     }
 
-    .section-heading{
-      font-size:clamp(34px,4vw,56px);
-      letter-spacing:-0.06em;
-      line-height:1.1;
-      margin-bottom:18px;
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-right: 1px solid var(--line);
     }
 
-    .section-text{
-      color:var(--muted);
-      line-height:1.8;
-      max-width:700px;
-      font-size:17px;
+    .stat-item:last-child {
+      border-right: 0;
     }
 
-    /* MOBILE */
+    .icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #f3f4f7;
+      color: #15161a;
+      flex: 0 0 auto;
+    }
 
-    @media(max-width:1180px){
+    .stat-item strong {
+      display: block;
+      font-size: 28px;
+      letter-spacing: -0.07em;
+      margin-bottom: 2px;
+    }
 
-      .page{
-        grid-template-columns:1fr;
+    .stat-item span {
+      font-size: 13px;
+      color: #1f2230;
+      line-height: 1.2;
+    }
+
+    section.content-section {
+      padding: 120px 0 20px;
+    }
+
+    .section-heading {
+      font-size: clamp(34px, 4vw, 56px);
+      letter-spacing: -0.06em;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 700px;
+      font-size: 17px;
+    }
+
+    .project-grid,
+    .service-grid {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card,
+    .service-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      min-height: 210px;
+      transition: 0.25s ease;
+    }
+
+    .project-card:hover,
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-thumb {
+      height: 130px;
+      border-radius: 18px;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(47,96,207,.18), rgba(121,173,223,.22), rgba(239,106,103,.12));
+      border: 1px solid var(--line);
+    }
+
+    .project-card h3,
+    .service-card h3 {
+      font-size: 20px;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .project-card p,
+    .service-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 100;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 14px;
+      background: #07080d;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 1180px) {
+      .page {
+        grid-template-columns: 1fr;
+        padding: 18px;
       }
 
-      .sidebar{
-        position:relative;
-        height:auto;
+      .mobile-toggle {
+        display: grid;
+        place-items: center;
       }
 
-      .main{
-        padding:20px 0 40px;
+      .sidebar {
+        position: fixed;
+        left: 18px;
+        top: 18px;
+        bottom: 18px;
+        width: 260px;
+        height: auto;
+        z-index: 90;
+        transform: translateX(-115%);
+        transition: 0.3s ease;
       }
 
-      .hero{
-        grid-template-columns:1fr;
+      .sidebar.open {
+        transform: translateX(0);
       }
 
-      .hero-visual{
-        min-height:620px;
+      .main {
+        padding: 52px 0 30px;
       }
 
-      .focus-card{
-        left:20px;
-        bottom:20px;
+      .hero {
+        grid-template-columns: 1fr;
       }
 
+      .hero-visual {
+        min-height: 620px;
+      }
+
+      .focus-card {
+        left: 30px;
+        bottom: 30px;
+      }
+
+      .logos {
+        margin-top: 42px;
+      }
+
+      .stats-bar,
+      .project-grid,
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item:nth-child(2) {
+        border-right: 0;
+      }
     }
 
-    @media(max-width:680px){
-
-      h1{
-        font-size:54px;
+    @media (max-width: 680px) {
+      .topbar {
+        align-items: flex-start;
+        gap: 18px;
+        flex-direction: column;
       }
 
-      .lead{
-        font-size:17px;
+      h1 {
+        font-size: 54px;
       }
 
-      .hero-visual{
-        min-height:500px;
+      .lead {
+        font-size: 17px;
       }
 
-      .hero-logo{
-        width:95%;
+      .hero-visual {
+        min-height: 500px;
       }
 
-      .focus-card{
-        display:none;
+      .hero-logo {
+        width: 95%;
       }
 
-      .stat-card{
-        top:20px;
-        right:20px;
+      .focus-card {
+        display: none;
       }
 
-      .btn{
-        width:100%;
+      .stat-card {
+        right: 18px;
+        top: 20px;
       }
 
+      .stats-bar,
+      .project-grid,
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 18px;
+      }
+
+      .stat-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
-
   </style>
 </head>
 
 <body>
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
 
   <div class="page">
 
-    <aside class="sidebar">
-
+    <aside class="sidebar" id="sidebar">
       <div>
-
         <div class="brand">
           <div class="brand-mark">DL</div>
-          <small>
-            Design Lab<br>
-            Creative Studio
-          </small>
+          <small>Design Lab<br>Creative Studio</small>
         </div>
 
         <nav class="nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#works">Works</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </nav>
+          <a href="#home" class="active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10.5V20h14v-9.5"/></svg>
+            Home
+          </a>
 
+          <a href="#about">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.8-4 5-6 8-6s6.2 2 8 6"/></svg>
+            About
+          </a>
+
+          <a href="#works">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5h8v2"/></svg>
+            Works
+          </a>
+
+          <a href="#services">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/></svg>
+            Services
+          </a>
+
+          <a href="#contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            Contact
+          </a>
+        </nav>
       </div>
 
       <div class="socials">
-
         <div class="social-row">
           <a href="#">in</a>
           <a href="#">Be</a>
@@ -485,22 +713,29 @@
           © 2026 Jann Nathaniel Jaravata<br>
           All rights reserved.
         </p>
-
       </div>
-
     </aside>
 
     <main class="main" id="home">
 
+      <div class="topbar">
+        <div class="eyebrow">
+          <span class="dot"></span>
+          Creative Design Portfolio
+        </div>
+
+        <div class="availability">
+          Available for new projects
+          <span class="dot"></span>
+        </div>
+      </div>
+
       <section class="hero">
 
         <div class="hero-copy">
-
           <h1>
             Visual Communication Designer &
-            <span class="gradient-text">
-              Frontend Creative
-            </span>
+            <span class="gradient-text">Frontend Creative</span>
           </h1>
 
           <p class="lead">
@@ -519,35 +754,22 @@
           </div>
 
           <div class="cta-row">
-
-            <a href="#works" class="btn primary">
-              View My Work →
-            </a>
-
-            <a href="#" class="btn">
-              Download Resume →
-            </a>
-
-            <a href="#contact" class="btn">
-              Let's Work Together →
-            </a>
-
+            <a href="#works" class="btn primary">View My Work →</a>
+            <a href="#" class="btn">Download Resume →</a>
+            <a href="#contact" class="btn">Let’s Work Together →</a>
           </div>
-
         </div>
 
         <div class="hero-visual">
-
           <div class="visual-grid"></div>
 
           <img
             src="hero-logo.png"
             class="hero-logo"
             alt="DesignLab Hero Logo"
-          >
+          />
 
           <div class="float-card focus-card">
-
             <p>Focused on</p>
 
             <div class="check-list">
@@ -555,40 +777,24 @@
               <span><i class="check">✓</i> Campaign Visuals</span>
               <span><i class="check">✓</i> Digital Interfaces</span>
             </div>
-
           </div>
 
           <div class="float-card stat-card">
-
             <svg class="line-chart" viewBox="0 0 160 60" fill="none">
-
-              <path
-                d="M10 48 L45 34 L78 41 L112 25 L150 12"
-                stroke="#263f77"
-                stroke-width="3"
-                fill="none"
-              />
-
+              <path d="M10 48 L45 34 L78 41 L112 25 L150 12" stroke="#263f77" stroke-width="3" fill="none"/>
               <circle cx="45" cy="34" r="4" fill="#263f77"/>
               <circle cx="78" cy="41" r="4" fill="#263f77"/>
               <circle cx="112" cy="25" r="4" fill="#263f77"/>
-
             </svg>
 
             <h3>7+</h3>
-
-            <p>
-              Years building visual experiences
-            </p>
-
+            <p>Years building visual experiences</p>
           </div>
-
         </div>
 
       </section>
 
       <div class="logos">
-
         <p class="logos-title">
           Trusted by brands, schools, and growing businesses
         </p>
@@ -596,14 +802,46 @@
         <div class="logo-row">
           <span>Panpacific</span>
           <span>CNA</span>
-          <span>DesignLab</span>
           <span>Sole Protect</span>
+          <span>DesignLab</span>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="icon-box">▣</div>
+          <div>
+            <strong>500+</strong>
+            <span>Design Deliverables</span>
+          </div>
         </div>
 
+        <div class="stat-item">
+          <div class="icon-box">☺</div>
+          <div>
+            <strong>10+</strong>
+            <span>Happy Clients</span>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="icon-box">☆</div>
+          <div>
+            <strong>100%</strong>
+            <span>Brand Consistency</span>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="icon-box">⚙</div>
+          <div>
+            <strong>8+</strong>
+            <span>Creative Services</span>
+          </div>
+        </div>
       </div>
 
       <section class="content-section" id="about">
-
         <h2 class="section-heading">
           A designer focused on clarity, consistency, and impact.
         </h2>
@@ -614,12 +852,142 @@
           and strategic communication to create designs that are not only beautiful,
           but useful.
         </p>
+      </section>
 
+      <section class="content-section" id="works">
+        <h2 class="section-heading">Featured Works</h2>
+
+        <p class="section-text">
+          A curated selection of branding, campaign design, institutional visuals,
+          social media design projects, packaging, and digital experiences.
+        </p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb"></div>
+            <h3>Panpacific University Campaigns</h3>
+            <p>
+              Institutional campaign visuals, social media announcements,
+              enrollment campaigns, and event design systems.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb"></div>
+            <h3>Design Lab Creative Studio</h3>
+            <p>
+              Brand development, content systems, promotional visuals,
+              and creative direction for DesignLab.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb"></div>
+            <h3>Client Brand Projects</h3>
+            <p>
+              Logo design, social media templates, ads, packaging mockups,
+              and digital assets for growing businesses.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="services">
+        <h2 class="section-heading">Services</h2>
+
+        <p class="section-text">
+          Design support for brands, schools, businesses, and creators
+          that need consistent and professional visuals.
+        </p>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Brand Identity</h3>
+            <p>
+              Logo systems, brand guides, visual direction,
+              and identity development.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Social Media Design</h3>
+            <p>
+              Campaign graphics, content templates, pubmats,
+              announcements, and ad creatives.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Campaign Visuals</h3>
+            <p>
+              Visual systems for events, enrollment campaigns,
+              launches, and promotions.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Print Design</h3>
+            <p>
+              Flyers, brochures, tarpaulins, posters,
+              IDs, signage, and other print-ready layouts.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Packaging & Mockups</h3>
+            <p>
+              Product packaging concepts, presentation mockups,
+              storefront visuals, and marketing materials.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Frontend Creative</h3>
+            <p>
+              Simple web interfaces, landing pages,
+              GitHub Pages sites, and HTML/CSS-based systems.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="contact">
+        <h2 class="section-heading">
+          Let’s build visuals people remember.
+        </h2>
+
+        <p class="section-text">
+          For collaborations, freelance projects, or remote design opportunities,
+          connect with me through LinkedIn or email.
+        </p>
+
+        <br><br>
+
+        <div class="cta-row">
+          <a href="mailto:jannjaravata@gmail.com" class="btn primary">Email Me →</a>
+          <a href="https://bit.ly/JNBJ-Portfolio" class="btn">View Portfolio →</a>
+        </div>
       </section>
 
     </main>
-
   </div>
 
+  <script>
+    const toggle = document.getElementById('mobileToggle');
+    const sidebar = document.getElementById('sidebar');
+    const links = document.querySelectorAll('.nav a');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+        sidebar.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
