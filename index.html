@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>
-    Jann Nathaniel Jaravata | DesignLab Creative Studio
-  </title>
+  <title>Jann Nathaniel Jaravata | DesignLab Creative Studio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   >
 
   <style>
-
     :root{
       --bg:#f7f8fb;
       --panel:#ffffff;
@@ -26,9 +21,6 @@
       --muted:#5f6472;
       --line:#e6e8ef;
       --blue:#2f60cf;
-      --light-blue:#79addf;
-      --deep-blue:#353d91;
-      --accent-coral:#ef6a67;
       --shadow:0 20px 60px rgba(10,20,40,.08);
       --radius-lg:28px;
     }
@@ -63,8 +55,6 @@
       min-height:100vh;
     }
 
-    /* SIDEBAR */
-
     .sidebar{
       position:sticky;
       top:24px;
@@ -79,21 +69,15 @@
     }
 
     .brand{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:10px;
+      text-align:center;
       margin-bottom:32px;
     }
 
     .brand-mark{
-      width:54px;
-      height:54px;
-      display:grid;
-      place-items:center;
       font-size:30px;
       font-weight:900;
       letter-spacing:-0.08em;
+      margin-bottom:10px;
     }
 
     .brand small{
@@ -101,7 +85,6 @@
       text-transform:uppercase;
       letter-spacing:.18em;
       color:var(--muted);
-      text-align:center;
       line-height:1.5;
     }
 
@@ -144,12 +127,6 @@
       background:#f4f5f8;
       border-radius:10px;
       font-weight:800;
-      transition:.25s ease;
-    }
-
-    .social-row a:hover{
-      background:var(--blue);
-      color:#fff;
     }
 
     .copyright{
@@ -157,8 +134,6 @@
       line-height:1.6;
       color:var(--muted);
     }
-
-    /* MAIN */
 
     .main{
       padding:54px 48px 32px 0;
@@ -195,8 +170,6 @@
       background:var(--blue);
     }
 
-    /* HERO */
-
     .hero{
       display:grid;
       grid-template-columns:1fr .95fr;
@@ -206,7 +179,7 @@
     }
 
     h1{
-      font-size:clamp(58px,6vw,92px);
+      font-size:clamp(50px,5.4vw,86px);
       line-height:.95;
       letter-spacing:-0.08em;
       font-weight:900;
@@ -215,14 +188,7 @@
     }
 
     .gradient-text{
-      background:linear-gradient(
-        90deg,
-        #4d7cff,
-        #79addf,
-        #5d57d9,
-        #ef6a67
-      );
-
+      background:linear-gradient(90deg,#4d7cff,#79addf,#5d57d9,#ef6a67);
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
@@ -280,19 +246,15 @@
       transform:translateY(-4px);
     }
 
-    /* HERO VISUAL */
-
     .hero-visual{
       position:relative;
       min-height:700px;
       border-radius:42px;
       overflow:hidden;
-
       background:
         radial-gradient(circle at top right, rgba(77,124,255,.14), transparent 25%),
         radial-gradient(circle at bottom left, rgba(239,106,103,.08), transparent 25%),
         #f8f9fd;
-
       border:1px solid #dfe3ef;
     }
 
@@ -312,10 +274,7 @@
       right:70px;
       bottom:70px;
       opacity:.35;
-
-      background-image:
-        radial-gradient(#263f77 1px, transparent 1px);
-
+      background-image:radial-gradient(#263f77 1px, transparent 1px);
       background-size:14px 14px;
     }
 
@@ -333,7 +292,6 @@
       width:240px;
       left:28px;
       bottom:145px;
-
       animation:floatCard 4s ease-in-out infinite;
     }
 
@@ -372,7 +330,6 @@
       width:190px;
       top:220px;
       right:24px;
-
       animation:floatStat 5s ease-in-out infinite;
     }
 
@@ -394,38 +351,16 @@
     }
 
     @keyframes floatCard{
-
-      0%{
-        transform:translateY(0px);
-      }
-
-      50%{
-        transform:translateY(-12px);
-      }
-
-      100%{
-        transform:translateY(0px);
-      }
-
+      0%{transform:translateY(0);}
+      50%{transform:translateY(-12px);}
+      100%{transform:translateY(0);}
     }
 
     @keyframes floatStat{
-
-      0%{
-        transform:translateY(0px);
-      }
-
-      50%{
-        transform:translateY(10px);
-      }
-
-      100%{
-        transform:translateY(0px);
-      }
-
+      0%{transform:translateY(0);}
+      50%{transform:translateY(10px);}
+      100%{transform:translateY(0);}
     }
-
-    /* LOGOS */
 
     .logos{
       margin-top:40px;
@@ -450,15 +385,12 @@
       letter-spacing:-0.06em;
     }
 
-    /* STATS */
-
     .stats-bar{
       margin-top:48px;
       background:#fff;
       border-radius:24px;
       box-shadow:var(--shadow);
       padding:34px 42px;
-
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:26px;
@@ -491,8 +423,6 @@
       font-size:13px;
       color:#1f2230;
     }
-
-    /* CONTENT */
 
     section.content-section{
       padding:120px 0 20px;
@@ -539,15 +469,7 @@
       height:130px;
       border-radius:18px;
       margin-bottom:18px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(47,96,207,.18),
-          rgba(121,173,223,.22),
-          rgba(239,106,103,.12)
-        );
-
+      background:linear-gradient(135deg,rgba(47,96,207,.18),rgba(121,173,223,.22),rgba(239,106,103,.12));
       border:1px solid var(--line);
     }
 
@@ -565,10 +487,7 @@
       font-size:14px;
     }
 
-    /* MOBILE */
-
     @media(max-width:1180px){
-
       .page{
         grid-template-columns:1fr;
       }
@@ -600,13 +519,17 @@
       .service-grid{
         grid-template-columns:repeat(2,1fr);
       }
-
     }
 
     @media(max-width:680px){
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+      }
 
       h1{
-        font-size:52px;
+        font-size:48px;
       }
 
       .lead{
@@ -639,34 +562,18 @@
       .btn{
         width:100%;
       }
-
     }
-
   </style>
-
 </head>
 
 <body>
-
   <div class="page">
 
-    <!-- SIDEBAR -->
-
     <aside class="sidebar">
-
       <div>
-
         <div class="brand">
-
-          <div class="brand-mark">
-            DL
-          </div>
-
-          <small>
-            Design Lab<br>
-            Creative Studio
-          </small>
-
+          <div class="brand-mark">DL</div>
+          <small>Design Lab<br>Creative Studio</small>
         </div>
 
         <nav class="nav">
@@ -676,11 +583,9 @@
           <a href="#services">Services</a>
           <a href="#contact">Contact</a>
         </nav>
-
       </div>
 
       <div class="socials">
-
         <div class="social-row">
           <a href="#">in</a>
           <a href="#">Be</a>
@@ -691,17 +596,12 @@
           © 2026 Jann Nathaniel Jaravata<br>
           All rights reserved.
         </p>
-
       </div>
-
     </aside>
-
-    <!-- MAIN -->
 
     <main class="main" id="home">
 
       <div class="topbar">
-
         <div class="eyebrow">
           <span class="dot"></span>
           Creative Design Portfolio
@@ -711,20 +611,13 @@
           Available for new projects
           <span class="dot"></span>
         </div>
-
       </div>
 
-      <!-- HERO -->
-
       <section class="hero">
-
         <div class="hero-copy">
-
           <h1>
             Jann Nathaniel Jaravata —
-            <span class="gradient-text">
-              Creative Director
-            </span>
+            <span class="gradient-text">Creative Director</span>
             & Founder of DesignLab Creative Studio
           </h1>
 
@@ -745,77 +638,214 @@
           </div>
 
           <div class="cta-row">
-
-            <a href="#works" class="btn primary">
-              View My Work →
-            </a>
-
-            <a href="#" class="btn">
-              Download Resume →
-            </a>
-
-            <a href="#contact" class="btn">
-              Let’s Work Together →
-            </a>
-
+            <a href="#works" class="btn primary">View My Work →</a>
+            <a href="#" class="btn">Download Resume →</a>
+            <a href="#contact" class="btn">Let’s Work Together →</a>
           </div>
-
         </div>
 
         <div class="hero-visual">
-
           <div class="visual-grid"></div>
 
-          <img
-            src="hero-logo.png"
-            class="hero-logo"
-            alt="DesignLab Hero Logo"
-          >
+          <img src="hero-logo.png" class="hero-logo" alt="DesignLab Hero Logo">
 
           <div class="float-card focus-card">
-
             <p>Focused on</p>
-
             <div class="check-list">
               <span><i class="check">✓</i> Brand Systems</span>
               <span><i class="check">✓</i> Campaign Visuals</span>
               <span><i class="check">✓</i> Digital Interfaces</span>
             </div>
-
           </div>
 
           <div class="float-card stat-card">
-
             <svg class="line-chart" viewBox="0 0 160 60" fill="none">
-
-              <path
-                d="M10 48 L45 34 L78 41 L112 25 L150 12"
-                stroke="#263f77"
-                stroke-width="3"
-                fill="none"
-              />
-
+              <path d="M10 48 L45 34 L78 41 L112 25 L150 12" stroke="#263f77" stroke-width="3" fill="none"/>
               <circle cx="45" cy="34" r="4" fill="#263f77"/>
               <circle cx="78" cy="41" r="4" fill="#263f77"/>
               <circle cx="112" cy="25" r="4" fill="#263f77"/>
-
             </svg>
 
             <h3>7+</h3>
-
-            <p>
-              Years building visual experiences
-            </p>
-
+            <p>Years building visual experiences</p>
           </div>
+        </div>
+      </section>
 
+      <div class="logos">
+        <p class="logos-title">Trusted by brands, schools, and growing businesses</p>
+        <div class="logo-row">
+          <span>Panpacific</span>
+          <span>CNA</span>
+          <span>DesignLab</span>
+          <span>Sole Protect</span>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="icon-box">▣</div>
+          <div>
+            <strong>500+</strong>
+            <span>Design Deliverables</span>
+          </div>
         </div>
 
+        <div class="stat-item">
+          <div class="icon-box">☺</div>
+          <div>
+            <strong>10+</strong>
+            <span>Happy Clients</span>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="icon-box">☆</div>
+          <div>
+            <strong>100%</strong>
+            <span>Brand Consistency</span>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="icon-box">⚙</div>
+          <div>
+            <strong>8+</strong>
+            <span>Creative Services</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="content-section" id="about">
+        <h2 class="section-heading">
+          A designer focused on clarity, consistency, and impact.
+        </h2>
+
+        <p class="section-text">
+          I help brands and institutions communicate through purposeful visual design.
+          My work combines branding, campaign systems, social media visuals,
+          and strategic communication to create designs that are not only beautiful,
+          but useful.
+        </p>
+      </section>
+
+      <section class="content-section" id="works">
+        <h2 class="section-heading">Featured Works</h2>
+
+        <p class="section-text">
+          A curated selection of branding, campaign design,
+          institutional visuals, social media projects, packaging concepts,
+          and frontend creative experiments.
+        </p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb"></div>
+            <h3>Panpacific University Campaigns</h3>
+            <p>
+              Institutional campaign visuals, social media announcements,
+              enrollment campaigns, and event design systems.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb"></div>
+            <h3>DesignLab Creative Studio</h3>
+            <p>
+              Brand development, content systems,
+              and promotional visuals for digital campaigns.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb"></div>
+            <h3>Client Brand Projects</h3>
+            <p>
+              Logo design, packaging, templates,
+              ads, and digital assets for growing businesses.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="services">
+        <h2 class="section-heading">Services</h2>
+
+        <p class="section-text">
+          Design support for brands, schools, businesses,
+          and creators that need consistent and professional visuals.
+        </p>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Brand Identity</h3>
+            <p>
+              Logo systems, brand guides, visual direction,
+              and identity development.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Social Media Design</h3>
+            <p>
+              Campaign graphics, content templates,
+              pubmats, announcements, and ad creatives.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Campaign Visuals</h3>
+            <p>
+              Visual systems for events, launches,
+              enrollment campaigns, and promotions.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Print Design</h3>
+            <p>
+              Posters, flyers, brochures, tarpaulins,
+              certificates, and print-ready layouts.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Packaging & Mockups</h3>
+            <p>
+              Product packaging concepts, storefront visuals,
+              mockups, and presentation materials.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <h3>Frontend Creative</h3>
+            <p>
+              Landing pages, portfolio sites,
+              simple web interfaces, and HTML/CSS systems.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="contact">
+        <h2 class="section-heading">
+          Let’s build visuals people remember.
+        </h2>
+
+        <p class="section-text">
+          For collaborations, freelance projects,
+          or remote opportunities, connect with me through email or LinkedIn.
+        </p>
+
+        <br><br>
+
+        <div class="cta-row">
+          <a href="mailto:jannjaravata@gmail.com" class="btn primary">Email Me →</a>
+          <a href="https://bit.ly/JNBJ-Portfolio" class="btn">View Portfolio →</a>
+        </div>
       </section>
 
     </main>
-
   </div>
-
 </body>
 </html>
