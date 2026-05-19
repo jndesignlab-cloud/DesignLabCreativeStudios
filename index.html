@@ -203,14 +203,14 @@
 
     .hero {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 36px;
-      align-items: end;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: center;
       position: relative;
     }
 
     .hero-copy {
-      padding-bottom: 40px;
+      padding-bottom: 18px;
       z-index: 3;
     }
 
@@ -236,6 +236,25 @@
       font-size: 18px;
       line-height: 1.8;
       margin-bottom: 46px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+      max-width: 620px;
+    }
+
+    .hero-tags span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      color: #2c3040;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(10, 20, 40, 0.05);
     }
 
     .cta-row {
@@ -271,24 +290,38 @@
     .hero-visual {
       position: relative;
       min-height: 620px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(47, 96, 207, 0.14);
       border-radius: 36px;
       background:
-        radial-gradient(circle at 68% 20%, rgba(47, 96, 207, 0.30), transparent 28%),
-        radial-gradient(circle at 78% 62%, rgba(121, 173, 223, 0.22), transparent 30%),
-        radial-gradient(circle at 40% 90%, rgba(239, 106, 103, 0.12), transparent 24%),
-        #fbfcff;
+        radial-gradient(circle at 50% 46%, rgba(47, 96, 207, 0.20), transparent 34%),
+        radial-gradient(circle at 76% 22%, rgba(239, 106, 103, 0.12), transparent 22%),
+        linear-gradient(135deg, #ffffff 0%, #f5f7ff 55%, #eef2ff 100%);
       overflow: hidden;
+      display: grid;
+      place-items: center;
     }
 
-    .portrait {
+    .hero-image {
+      position: relative;
+      width: min(88%, 620px);
+      z-index: 3;
+      filter: drop-shadow(0 34px 42px rgba(35, 48, 112, 0.28));
+      animation: floatHero 6s ease-in-out infinite;
+    }
+
+    @keyframes floatHero {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-14px) rotate(1deg); }
+    }
+
+    .hero-glow {
       position: absolute;
-      right: -4%;
-      bottom: -2%;
-      width: 83%;
-      max-width: 680px;
-      filter: grayscale(100%) contrast(1.05);
-      z-index: 2;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      background: rgba(47, 96, 207, 0.16);
+      filter: blur(40px);
+      z-index: 1;
     }
 
     .visual-grid {
@@ -602,9 +635,8 @@
         min-height: 500px;
       }
 
-      .portrait {
+      .hero-image {
         width: 105%;
-        right: -18%;
       }
 
       .focus-card {
@@ -688,26 +720,34 @@
 
       <section class="hero">
         <div class="hero-copy">
-          <h1>I design strategic <span class="gradient-text">visuals</span> that help brands communicate clearly.</h1>
-          <p class="lead">Hi, I’m Jann Nathaniel Jaravata, a Visual Communication Designer and Founder of Design Lab Creative Studio. I create branding, campaign visuals, and digital designs for brands, institutions, and businesses.</p>
+          <h1>Visual Communication Designer & <span class="gradient-text">Frontend Creative</span></h1>
+          <p class="lead">I turn ideas into polished visuals, campaigns, and functional digital experiences. I design brand identities, social media systems, print materials, packaging, and web-based solutions for brands, schools, and growing businesses.</p>
+          <div class="hero-tags">
+            <span>Branding</span>
+            <span>Social Media</span>
+            <span>Print</span>
+            <span>UI/UX</span>
+            <span>Frontend</span>
+            <span>Packaging</span>
+          </div>
           <div class="cta-row">
-            <a href="#works" class="btn primary">View My Works →</a>
-            <a href="#contact" class="btn">Let’s Connect →</a>
+            <a href="#works" class="btn primary">View My Work →</a>
+            <a href="https://bit.ly/JNBJ-Resume" class="btn">Download Resume →</a>
+            <a href="#contact" class="btn">Let’s Work Together →</a>
           </div>
         </div>
 
         <div class="hero-visual">
+          <div class="hero-glow"></div>
           <div class="visual-grid"></div>
-
-          <!-- Replace this image with your own portrait file -->
-          <img class="portrait" src="pfp.png" alt="Portrait of Jann Nathaniel Jaravata" />
+          <img class="hero-image" src="hero-logo.png" alt="Floating Design Lab 3D logo" />
 
           <div class="float-card focus-card">
-            <p>Focused on</p>
+            <p>Creative focus</p>
             <div class="check-list">
-              <span><i class="check">✓</i> Brand Identity</span>
-              <span><i class="check">✓</i> Social Media Design</span>
+              <span><i class="check">✓</i> Brand Systems</span>
               <span><i class="check">✓</i> Campaign Visuals</span>
+              <span><i class="check">✓</i> Web Interfaces</span>
             </div>
           </div>
 
@@ -718,8 +758,8 @@
               <circle cx="78" cy="41" r="4" fill="#263f77"/>
               <circle cx="112" cy="25" r="4" fill="#263f77"/>
             </svg>
-            <h3>6+</h3>
-            <p>Years of design experience</p>
+            <h3>7+</h3>
+            <p>Years building visual experiences</p>
           </div>
         </div>
       </section>
@@ -737,19 +777,19 @@
       <div class="stats-bar">
         <div class="stat-item">
           <div class="icon-box">▣</div>
-          <div><strong>500+</strong><span>Design Deliverables</span></div>
+          <div><strong>7+</strong><span>Years Experience</span></div>
         </div>
         <div class="stat-item">
           <div class="icon-box">☺</div>
-          <div><strong>10+</strong><span>Happy Clients</span></div>
+          <div><strong>30+</strong><span>Freelance Projects</span></div>
         </div>
         <div class="stat-item">
           <div class="icon-box">☆</div>
-          <div><strong>100%</strong><span>Brand Consistency</span></div>
+          <div><strong>200+</strong><span>Marketing Materials</span></div>
         </div>
         <div class="stat-item">
           <div class="icon-box">⚙</div>
-          <div><strong>8+</strong><span>Creative Services</span></div>
+          <div><strong>UI</strong><span>Web Systems + Design</span></div>
         </div>
       </div>
 
